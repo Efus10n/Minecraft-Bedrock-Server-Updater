@@ -1,11 +1,11 @@
 #!/bin/bash
 
-MCDIR=$1
+MCDIR=/home/rjohn/minecraft_bedrock
 
-tmux new-session -s MCserver -d
+tmux new-session -s minecraft_bedrock -d
 sleep 1
-tmux send-keys -t MCserver "cd ${MCDIR}/running" Enter
+tmux send-keys -t minecraft_bedrock "cd ${MCDIR}/current" Enter
 sleep 1
-tmux send-keys -t MCserver 'LD_LIBRARY_PATH=. ./bedrock_server' Enter
+tmux send-keys -t minecraft_bedrock 'LD_LIBRARY_PATH=. ./bedrock_server' Enter
 
 echo "server turned on"

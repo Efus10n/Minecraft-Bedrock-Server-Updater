@@ -50,7 +50,7 @@ logfile = minecraft_directory+'/updater/update.log'
 
 
 
-running_files = os.listdir(minecraft_directory+'/running')
+running_files = os.listdir(minecraft_directory+'/current')
 if len(running_files) == 0:
     # Download server binary
     subprocess.run(['wget', '-P', minecraft_directory+'/updater', '-c', download_link])
